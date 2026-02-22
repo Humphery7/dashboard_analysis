@@ -6,8 +6,13 @@ st.set_page_config(
     layout="wide",
 )
 
-if "active_page" not in st.session_state:
-    st.session_state.active_page = "Home"
+if "page" not in st.query_params:
+    st.query_params["page"] = "home"
+
+current_page = st.query_params.get("page", "home").lower()
+if current_page not in {"home", "about", "analytics", "contact"}:
+    current_page = "home"
+    st.query_params["page"] = "home"
 
 # ── Global CSS (minimal – only safe styling) ──────────────────────────────────
 st.markdown("""
@@ -91,45 +96,27 @@ with nav_left:
     </div>""", unsafe_allow_html=True)
 
 with nav_links:
-    st.markdown("""
-    <style>
-    div[data-testid="stHorizontalBlock"] div[data-testid="stButton"] {
-        width: auto;
-    }
-    button[kind="secondary"][data-testid^="nav_"] {
-        border: none !important;
-        background: transparent !important;
-        border-radius: 0 !important;
-        padding: 0 0 12px !important;
-        min-height: 0 !important;
-        font-size: 0.92rem !important;
-        font-weight: 500 !important;
-    }
-    </style>
-    """, unsafe_allow_html=True)
-    n1, n2, n3, n4 = st.columns([1, 1, 1, 1], gap="small")
-    for col, label in zip([n1, n2, n3, n4], ["Home", "About", "Analytics", "Contact"]):
-        with col:
-            active = st.session_state.active_page == label
-            if st.button(label, key=f"nav_{label}"):
-                st.session_state.active_page = label
-                st.rerun()
-            color = YELLOW if active else MUTED
-            weight = 700 if active else 500
-            border = f"border-bottom:2.5px solid {YELLOW};" if active else ""
-            st.markdown(
-                f"""
-                <style>
-                button[kind="secondary"][data-testid="nav_{label}"] {{
-                    color: {color} !important;
-                    font-weight: {weight} !important;
-                    {border}
-                }}
-                </style>
-                """,
-                unsafe_allow_html=True,
-            )
-    st.markdown("<div style='border-bottom:2px solid #ECEEF2;margin-top:-2px'></div>", unsafe_allow_html=True)
+    home_active = current_page == "home"
+    about_active = current_page == "about"
+    analytics_active = current_page == "analytics"
+    contact_active = current_page == "contact"
+
+    st.markdown(f"""
+    <div style="display:flex;gap:36px;align-items:center;padding:16px 0 0;
+                border-bottom:2px solid #ECEEF2">
+      <a href="?page=home" style="text-decoration:none;color:{YELLOW if home_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if home_active else 500};cursor:pointer;padding-bottom:14px;
+         {'border-bottom:2.5px solid ' + YELLOW if home_active else ''}">Home</a>
+      <a href="?page=about" style="text-decoration:none;color:{YELLOW if about_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if about_active else 500};cursor:pointer;padding-bottom:14px;
+         {'border-bottom:2.5px solid ' + YELLOW if about_active else ''}">About</a>
+      <a href="?page=analytics" style="text-decoration:none;color:{YELLOW if analytics_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if analytics_active else 500};cursor:pointer;padding-bottom:12px;
+         {'border-bottom:2.5px solid ' + YELLOW if analytics_active else ''}">Analytics</a>
+      <a href="?page=contact" style="text-decoration:none;color:{YELLOW if contact_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if contact_active else 500};cursor:pointer;padding-bottom:14px;
+         {'border-bottom:2.5px solid ' + YELLOW if contact_active else ''}">Contact</a>
+    </div>""", unsafe_allow_html=True)
 
 with nav_right:
     st.markdown("""
@@ -140,14 +127,22 @@ with nav_right:
 
 st.markdown("<br>", unsafe_allow_html=True)
 
-if st.session_state.active_page == "About":
-    st.title("About")
-    st.write("DataPulse helps teams track product, customer, and location metrics in one place.")
+if current_page == "about":
+    st.markdown(f"""
+    <h1 style="margin:0;font-size:1.6rem;font-weight:700">About</h1>
+    <p style="color:{MUTED};margin:6px 0 0;font-size:0.95rem">
+      DataPulse helps teams monitor product performance, customer acquisition, and location insights.
+    </p>
+    """, unsafe_allow_html=True)
     st.stop()
 
-if st.session_state.active_page == "Contact":
-    st.title("Contact")
-    st.write("Reach us at support@datapulse.example for inquiries and feedback.")
+if current_page == "contact":
+    st.markdown(f"""
+    <h1 style="margin:0;font-size:1.6rem;font-weight:700">Contact</h1>
+    <p style="color:{MUTED};margin:6px 0 0;font-size:0.95rem">
+      Reach us at <a href="mailto:support@datapulse.example">support@datapulse.example</a>.
+    </p>
+    """, unsafe_allow_html=True)
     st.stop()
 
 # ═══════════════════════════════════════════════════════════════════════════════
