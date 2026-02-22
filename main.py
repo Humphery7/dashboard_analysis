@@ -8,10 +8,13 @@ st.set_page_config(
     layout="wide",
 )
 
-if "active_page" not in st.session_state:
-    st.session_state.active_page = "home"
+if "page" not in st.query_params:
+    st.query_params["page"] = "home"
 
-current_page = st.session_state.active_page
+current_page = st.query_params.get("page", "home").lower()
+if current_page not in {"home", "about", "analytics", "contact"}:
+    current_page = "home"
+    st.query_params["page"] = "home"
 
 YELLOW = "#F5B800"
 MUTED = "#7A7A9D"
@@ -69,42 +72,30 @@ with nav_left:
     )
 
 with nav_links:
+    home_active = current_page == "home"
+    about_active = current_page == "about"
+    analytics_active = current_page == "analytics"
+    contact_active = current_page == "contact"
+
     st.markdown(
-        """
-        <style>
-        div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button {
-            border: none !important;
-            border-radius: 0 !important;
-            background: transparent !important;
-            min-height: 0 !important;
-            padding: 0 0 12px !important;
-            white-space: nowrap !important;
-        }
-        </style>
-        """,
+        f"""
+    <div style="display:flex;gap:36px;align-items:center;padding:16px 0 0;
+                border-bottom:2px solid #ECEEF2">
+      <a href="?page=home" target="_self" style="text-decoration:none;color:{YELLOW if home_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if home_active else 500};cursor:pointer;padding-bottom:14px;
+         {'border-bottom:2.5px solid ' + YELLOW if home_active else ''}">Home</a>
+      <a href="?page=about" target="_self" style="text-decoration:none;color:{YELLOW if about_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if about_active else 500};cursor:pointer;padding-bottom:14px;
+         {'border-bottom:2.5px solid ' + YELLOW if about_active else ''}">About</a>
+      <a href="?page=analytics" target="_self" style="text-decoration:none;color:{YELLOW if analytics_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if analytics_active else 500};cursor:pointer;padding-bottom:12px;
+         {'border-bottom:2.5px solid ' + YELLOW if analytics_active else ''}">Analytics</a>
+      <a href="?page=contact" target="_self" style="text-decoration:none;color:{YELLOW if contact_active else MUTED};font-size:0.92rem;
+         font-weight:{700 if contact_active else 500};cursor:pointer;padding-bottom:14px;
+         {'border-bottom:2.5px solid ' + YELLOW if contact_active else ''}">Contact</a>
+    </div>""",
         unsafe_allow_html=True,
     )
-    nav_cols = st.columns([1, 1, 1, 1], gap="small")
-    for col, label in zip(nav_cols, ["Home", "About", "Analytics", "Contact"]):
-        page_key = label.lower()
-        with col:
-            if st.button(label, key=f"nav_{page_key}"):
-                st.session_state.active_page = page_key
-            is_active = current_page == page_key
-            st.markdown(
-                f"""
-                <style>
-                div[data-testid="stButton"]:has(button[data-testid*="nav_{page_key}"]) button {{
-                    color: {YELLOW if is_active else MUTED} !important;
-                    font-size: 0.92rem !important;
-                    font-weight: {700 if is_active else 500} !important;
-                    {'border-bottom:2.5px solid ' + YELLOW + ' !important;' if is_active else 'border-bottom: none !important;'}
-                }}
-                </style>
-                """,
-                unsafe_allow_html=True,
-            )
-    st.markdown("<div style='border-bottom:2px solid #ECEEF2;margin-top:-2px'></div>", unsafe_allow_html=True)
 
 with nav_right:
     st.markdown(
