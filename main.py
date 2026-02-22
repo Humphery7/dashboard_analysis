@@ -60,6 +60,12 @@ div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button {
     min-height: 0 !important;
     padding: 0 0 14px !important;
     font-size: 0.92rem !important;
+    justify-content: flex-start !important;
+}
+
+div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button:hover {
+    border: none !important;
+    box-shadow: none !important;
 }
 </style>
 """,
@@ -80,7 +86,7 @@ with nav_left:
     )
 
 with nav_links:
-    n1, n2, n3, n4 = st.columns([1, 1, 1.1, 1], gap="large")
+    n1, n2, n3, n4, _ = st.columns([1, 1, 1.1, 1, 4.4], gap="small")
     for col, label in zip([n1, n2, n3, n4], ["Home", "About", "Analytics", "Contact"]):
         page_key = label.lower()
         with col:
