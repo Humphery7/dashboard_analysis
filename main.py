@@ -6,6 +6,9 @@ st.set_page_config(
     layout="wide",
 )
 
+if "active_page" not in st.session_state:
+    st.session_state.active_page = "Home"
+
 # ── Global CSS (minimal – only safe styling) ──────────────────────────────────
 st.markdown("""
 <style>
@@ -88,15 +91,45 @@ with nav_left:
     </div>""", unsafe_allow_html=True)
 
 with nav_links:
-    st.markdown(f"""
-    <div style="display:flex;gap:36px;align-items:center;padding:16px 0 0;
-                border-bottom:2px solid #ECEEF2">
-      <span style="color:{MUTED};font-size:0.92rem;cursor:pointer;padding-bottom:14px">Home</span>
-      <span style="color:{MUTED};font-size:0.92rem;cursor:pointer;padding-bottom:14px">About</span>
-      <span style="color:{YELLOW};font-size:0.92rem;font-weight:700;cursor:pointer;
-                  padding-bottom:12px;border-bottom:2.5px solid {YELLOW}">Analytics</span>
-      <span style="color:{MUTED};font-size:0.92rem;cursor:pointer;padding-bottom:14px">Contact</span>
-    </div>""", unsafe_allow_html=True)
+    st.markdown("""
+    <style>
+    div[data-testid="stHorizontalBlock"] div[data-testid="stButton"] {
+        width: auto;
+    }
+    button[kind="secondary"][data-testid^="nav_"] {
+        border: none !important;
+        background: transparent !important;
+        border-radius: 0 !important;
+        padding: 0 0 12px !important;
+        min-height: 0 !important;
+        font-size: 0.92rem !important;
+        font-weight: 500 !important;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    n1, n2, n3, n4 = st.columns([1, 1, 1, 1], gap="small")
+    for col, label in zip([n1, n2, n3, n4], ["Home", "About", "Analytics", "Contact"]):
+        with col:
+            active = st.session_state.active_page == label
+            if st.button(label, key=f"nav_{label}"):
+                st.session_state.active_page = label
+                st.rerun()
+            color = YELLOW if active else MUTED
+            weight = 700 if active else 500
+            border = f"border-bottom:2.5px solid {YELLOW};" if active else ""
+            st.markdown(
+                f"""
+                <style>
+                button[kind="secondary"][data-testid="nav_{label}"] {{
+                    color: {color} !important;
+                    font-weight: {weight} !important;
+                    {border}
+                }}
+                </style>
+                """,
+                unsafe_allow_html=True,
+            )
+    st.markdown("<div style='border-bottom:2px solid #ECEEF2;margin-top:-2px'></div>", unsafe_allow_html=True)
 
 with nav_right:
     st.markdown("""
@@ -106,6 +139,16 @@ with nav_right:
     </div>""", unsafe_allow_html=True)
 
 st.markdown("<br>", unsafe_allow_html=True)
+
+if st.session_state.active_page == "About":
+    st.title("About")
+    st.write("DataPulse helps teams track product, customer, and location metrics in one place.")
+    st.stop()
+
+if st.session_state.active_page == "Contact":
+    st.title("Contact")
+    st.write("Reach us at support@datapulse.example for inquiries and feedback.")
+    st.stop()
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # PAGE TITLE + LOCATION PILL TABS
