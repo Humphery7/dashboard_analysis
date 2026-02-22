@@ -9,11 +9,11 @@ MUTED = "#7A7A9D"
 
 
 def _load_data() -> pd.DataFrame | None:
-    uploaded = st.file_uploader("Upload spar_analysis.csv", type=["csv"], key="analytics_csv")
-    if uploaded is not None:
-        return pd.read_csv(uploaded)
+    # uploaded = st.file_uploader("Upload spar_analysis.csv", type=["csv"], key="analytics_csv")
+    # if uploaded is not None:
+    #     return pd.read_csv(uploaded)
 
-    default_path = Path("../Downloads/spar_analysis.csv")
+    default_path = Path("spar_analysis.csv")
     if default_path.exists():
         return pd.read_csv(default_path)
 
