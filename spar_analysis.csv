@@ -1,0 +1,81 @@
+location,product_name,level_one,level_two,level_three,avg_price,order_count,rank_in_location
+Abuja,Milk & Butter Bread,Ready To Consume,Food,Freshly Baked,1476.103542234,1835,1
+Abuja,Cway Drinking Water 750Ml,Beverages,Water,Still,184.536357786,1554,2
+Abuja,Countryside Bread,Bread / Bakery,Bread,Packaged,1582.103725347,1369,3
+Abuja,Aquafina Premium Drinking Water 75Cl,Beverages,Water,Still,246.958710692,1272,4
+Abuja,Nestle Pure Life Drinking Water 60Cl,Beverages,Water,Still,211.115458015,1048,5
+Abuja,Indomie Noodles - Onion Chicken 70Gm,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,315.319018405,815,6
+Abuja,Sprite 33cl Can,Beverages,Soft Drinks / Mixers,Lemon / Lime,522.619663648,773,7
+Abuja,Coca-Cola 33cl Can,Beverages,Soft Drinks / Mixers,Cola,525.971646424,741,8
+Abuja,Snickers Chocolate 50G,Snacks,Confectionary,Chocolate,1385.013774105,726,9
+Abuja,Titus Sardines 125G,Packaged Foods,Canned / Jarred / Instant Meals,Canned Meat / Seafood,1383.507779349,707,10
+Abuja,Carrot - (Pack),Produce,Vegetables,Regular,1794.670411348,705,11
+Abuja,Onions Red - Regular,Produce,Vegetables,Regular,1830.978512518,679,12
+Abuja,Eva Table Water 0.75Cl,Beverages,Water,Still,298.874939759,664,13
+Abuja,Apple Red - Big Kg,Produce,Fruit,Apples / Pears,4509.274593373,664,14
+Abuja,Desperados Tequila Flavoured Beer Original 44Cl Can,Bws,Beer / Cider,Shandy / Flavored Beer,929.302694136,631,15
+Abuja,Heineken Lager Beer Sleek Can 33Cl,Bws,Beer / Cider,Lager,769.723408724,619,16
+Abuja,Tomato - (Small pack),Produce,Vegetables,Regular,2541.010683333,600,17
+Abuja,Indomie Noodles - Chicken 70Gm,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,291.423423423,555,18
+Abuja,Eva Table Water 150Cl,Beverages,Water,Still,366.603773585,530,19
+Abuja,Familia Classic Natural Whiteness Toilet Rolls Single,Home / Pet,Disposables,Paper Products,401.159695817,526,20
+Island,Milk & Butter Bread,Ready To Consume,Food,Freshly Baked,1484.586693548,4960,1
+Island,Classic Bread,Ready To Consume,Food,Freshly Baked,1482.760233918,4275,2
+Island,Nestle Pure Life Drinking Water 60Cl,Beverages,Water,Still,212.329311927,2180,3
+Island,Onions Red - Regular,Produce,Vegetables,Regular,1908.564059356,1988,4
+Island,Eva Table Water 150Cl,Beverages,Water,Still,391.206521739,1840,5
+Island,Aquafina Premium Drinking Water 75Cl,Beverages,Water,Still,252.477334071,1808,6
+Island,Tomato - (Small pack),Produce,Vegetables,Regular,2527.800305257,1769,7
+Island,Titus Sardines 125G,Packaged Foods,Canned / Jarred / Instant Meals,Canned Meat / Seafood,1349.175199090,1758,8
+Island,Indomie Noodles - Onion Chicken 70Gm,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,315.717509025,1662,9
+Island,Plantain,Produce,Fruit,Banana,3108.800706932,1457,10
+Island,Bigi Premium Drinking Water 750Ml Pet,Beverages,Water,Still,147.761274159,1397,11
+Island,Coca-Cola 33cl Can,Beverages,Soft Drinks / Mixers,Cola,522.797166948,1186,12
+Island,Potato - (Pack),Produce,Vegetables,Organic,2837.788214286,1176,13
+Island,Malta Guinness Can 33Cl,Beverages,Soft Drinks / Mixers,Other Soft Drinks,755.395350195,1028,14
+Island,Coca-Cola 50Cl PET,Beverages,Soft Drinks / Mixers,Cola,447.524679171,1013,15
+Island,Cucumber,Produce,Vegetables,Regular,1273.275183714,1007,16
+Island,Wheat Bread,Ready To Consume,Food,Freshly Baked,1472.441742655,987,17
+Island,Snickers Chocolate 50G,Snacks,Confectionary,Chocolate,1373.168724280,972,18
+Island,Sweet Potatoes White Regular,Produce,Vegetables,Regular,876.355036420,961,19
+Island,Carrot - (Pack),Produce,Vegetables,Regular,2602.178468750,960,20
+Mainland,Milk & Butter Bread,Ready To Consume,Food,Freshly Baked,1481.272482014,2224,1
+Mainland,Classic Bread,Ready To Consume,Food,Freshly Baked,1473.175965665,1165,2
+Mainland,Titus Sardines 125G,Packaged Foods,Canned / Jarred / Instant Meals,Canned Meat / Seafood,1377.455410226,841,3
+Mainland,Wheat Bread,Ready To Consume,Food,Freshly Baked,1492.705248991,743,4
+Mainland,Eva Table Water 150Cl,Beverages,Water,Still,383.225584594,727,5
+Mainland,Indomie Noodles - Onion Chicken 70Gm,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,313.856534091,704,6
+Mainland,Banana - (1 bunch),Produce,Fruit,Banana,1796.700915141,601,7
+Mainland,Snickers Chocolate 50G,Snacks,Confectionary,Chocolate,1369.031311155,511,8
+Mainland,Bigi Premium Drinking Water 750Ml Pet,Beverages,Water,Still,148.017751479,507,9
+Mainland,Malta Guinness Can 33Cl,Beverages,Soft Drinks / Mixers,Other Soft Drinks,756.028672032,497,10
+Mainland,Frosty Bite Ice Cream Fantasy Peanut Crunch 80G,Frozen,Ice Cream / Desserts,Ice Cream,1373.605870021,477,11
+Mainland,Coca-Cola 33cl Can,Beverages,Soft Drinks / Mixers,Cola,522.954198646,443,12
+Mainland,Golden Penny Spaghetti 500Gm,Packaged Foods,Pasta / Rice / Grains,Pastas,1175.000000000,410,13
+Mainland,Mcvities All Butter Shortbread 100G/125G,Snacks,Confectionary,Biscuits,1498.543209877,405,14
+Mainland,Desperados Tequila Flavoured Beer Original 44Cl Can,Bws,Beer / Cider,Shandy / Flavored Beer,926.002506266,399,15
+Mainland,Coca-Cola 50Cl PET,Beverages,Soft Drinks / Mixers,Cola,449.709595960,396,16
+Mainland,Orijin Bitters Drink 20Cl,Bws,Spirits,Liqueurs / Creams,1079.923273657,391,17
+Mainland,Mcvities All Butter Shortbread 200Gm,Snacks,Confectionary,Biscuits,2871.041131105,389,18
+Mainland,Onions Red - Regular,Produce,Vegetables,Regular,1762.375837696,382,19
+Mainland,Meat Pie,Ready To Consume,Food,Individual Meals,1164.171122995,374,20
+PHC,INDOMIE INSTANT NOODLES CHICKEN FLAVOR 40PCKS +ADDMIE 70G,Packaged Foods,Breakfast / Spreads,Cereals,13750.000000000,83,1
+PHC,INDOMIE INSTANT NOODLES CHICKEN FLAVOR SUPER PACK 40PCKS +ADDMIE 120G,Personal Care / Baby / Health,Health,Medications,20355.000000000,82,2
+PHC,Indomie Noodles - Chicken Flvr.120G,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,447.671052632,76,3
+PHC,Hero Premium Lager Bottle 600Ml,Bws,Beer / Cider,Lager,1043.802816901,71,4
+PHC,Milk & Butter Bread,Ready To Consume,Food,Freshly Baked,1518.181818182,66,5
+PHC,Banana - (1 bunch),Produce,Fruit,Banana,1628.611111111,54,6
+PHC,Heineken Lager Beer 60Cl (Bottle),Bws,Beer / Cider,Lager,1590.434782609,46,7
+PHC,Classic Bread,Ready To Consume,Food,Freshly Baked,1512.790697674,43,8
+PHC,Nestle Milo Food Drink Sachet 400G/40G,Ready To Consume,Beverages,Rtd Chocolate,4160.000000000,41,9
+PHC,Eva Table Water 150Cl,Beverages,Water,Still,382.352941176,34,10
+PHC,Titus Sardines 125G,Packaged Foods,Canned / Jarred / Instant Meals,Canned Meat / Seafood,1413.939393939,33,11
+PHC,Indomie Noodles - Chicken 70Gm,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,296.774193548,31,12
+PHC,Tomato - (Small pack),Produce,Vegetables,Regular,3032.258064516,31,13
+PHC,Indomie Noodles - Onion Chicken 70Gm,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,313.870967742,31,14
+PHC,Wheat Bread,Ready To Consume,Food,Freshly Baked,1550.000000000,30,15
+PHC,INDOMIE INSTANT NOODLES ONION CHICKEN FLAVOR 40PCKS +ADDMIE 70G,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,14765.000000000,29,16
+PHC,Snickers Chocolate 50G,Snacks,Confectionary,Chocolate,1376.111111111,27,17
+PHC,Nestle Pure Life Drinking Water 60Cl,Beverages,Water,Still,210.400000000,25,18
+PHC,Munch It Cheesy Stix Crunchy Snacks 30G,Snacks,Salty Snacks,Specialty Snacks,195.000000000,24,19
+PHC,Star Lager Beer Bottle 60Cl,Bws,Beer / Cider,Lager,1362.500000000,24,20
