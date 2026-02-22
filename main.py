@@ -60,7 +60,7 @@ div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button {
     min-height: 0 !important;
     height: auto !important;
     line-height: 1.1 !important;
-    padding: 0 0 14px !important;
+    padding: 0 !important;
     font-size: 0.92rem !important;
     justify-content: flex-start !important;
     margin: 0 !important;
@@ -106,7 +106,7 @@ with nav_left:
     )
 
 with nav_links:
-    st.markdown("<div style='padding:16px 0 0;border-bottom:2px solid #DDE1E9'>", unsafe_allow_html=True)
+    st.markdown("<div style='padding:16px 0 0'>", unsafe_allow_html=True)
     n1, n2, n3, n4, _ = st.columns([1.0, 1.0, 1.3, 1.0, 5.0], gap="small")
     for col, label in zip([n1, n2, n3, n4], ["Home", "About", "Analytics", "Contact"]):
         page_key = label.lower()
@@ -121,14 +121,14 @@ with nav_links:
                 div[data-testid="stButton"]:has(button[data-testid*="nav_{page_key}"]) button {{
                     color: {YELLOW if is_active else MUTED} !important;
                     font-weight: {700 if is_active else 500} !important;
-                    {'border-bottom:2.5px solid ' + YELLOW + ' !important;' if is_active else 'border-bottom:none !important;'}
-                    padding-bottom: {'12px' if is_active else '14px'} !important;
+                    border-bottom: none !important;
+                    padding-bottom: 0 !important;
                 }}
                 </style>
                 """,
                 unsafe_allow_html=True,
             )
-    st.markdown("</div>", unsafe_allow_html=True)
+    st.markdown("<div style='border-bottom:2px solid #DDE1E9;margin-top:14px'></div></div>", unsafe_allow_html=True)
 
 with nav_right:
     st.markdown(
