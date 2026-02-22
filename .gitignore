@@ -1,0 +1,15 @@
+.idea/
+*.iml
+*.iws
+.env
+.env.local
+.env.dev
+credentials.json
+service_account.json
+secrets.txt
+*.key
+*.pem
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+.ipynb_checkpoints/
+*.ipynb_checkpoints
