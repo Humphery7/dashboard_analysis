@@ -14,7 +14,7 @@ if "active_page" not in st.session_state:
 current_page = st.session_state.active_page
 
 YELLOW = "#F5B800"
-MUTED = "#7A7A9D"
+MUTED = "#6F739B"
 
 st.markdown(
     """
@@ -89,8 +89,8 @@ with nav_left:
     )
 
 with nav_links:
-    st.markdown("<div style='padding:16px 0 0;border-bottom:2px solid #ECEEF2'>", unsafe_allow_html=True)
-    n1, n2, n3, n4, _ = st.columns([1, 1, 1.1, 1, 3.8], gap="medium")
+    st.markdown("<div style='padding:16px 0 0;border-bottom:2px solid #DDE1E9'>", unsafe_allow_html=True)
+    n1, n2, n3, n4, _ = st.columns([1.0, 1.0, 1.3, 1.0, 5.0], gap="small")
     for col, label in zip([n1, n2, n3, n4], ["Home", "About", "Analytics", "Contact"]):
         page_key = label.lower()
         with col:
