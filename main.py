@@ -81,16 +81,16 @@ with nav_links:
         f"""
     <div style="display:flex;gap:36px;align-items:center;padding:16px 0 0;
                 border-bottom:2px solid #ECEEF2">
-      <a href="?page=home" style="text-decoration:none;color:{YELLOW if home_active else MUTED};font-size:0.92rem;
+      <a href="?page=home" target="_self" style="text-decoration:none;color:{YELLOW if home_active else MUTED};font-size:0.92rem;
          font-weight:{700 if home_active else 500};cursor:pointer;padding-bottom:14px;
          {'border-bottom:2.5px solid ' + YELLOW if home_active else ''}">Home</a>
-      <a href="?page=about" style="text-decoration:none;color:{YELLOW if about_active else MUTED};font-size:0.92rem;
+      <a href="?page=about" target="_self" style="text-decoration:none;color:{YELLOW if about_active else MUTED};font-size:0.92rem;
          font-weight:{700 if about_active else 500};cursor:pointer;padding-bottom:14px;
          {'border-bottom:2.5px solid ' + YELLOW if about_active else ''}">About</a>
-      <a href="?page=analytics" style="text-decoration:none;color:{YELLOW if analytics_active else MUTED};font-size:0.92rem;
+      <a href="?page=analytics" target="_self" style="text-decoration:none;color:{YELLOW if analytics_active else MUTED};font-size:0.92rem;
          font-weight:{700 if analytics_active else 500};cursor:pointer;padding-bottom:12px;
          {'border-bottom:2.5px solid ' + YELLOW if analytics_active else ''}">Analytics</a>
-      <a href="?page=contact" style="text-decoration:none;color:{YELLOW if contact_active else MUTED};font-size:0.92rem;
+      <a href="?page=contact" target="_self" style="text-decoration:none;color:{YELLOW if contact_active else MUTED};font-size:0.92rem;
          font-weight:{700 if contact_active else 500};cursor:pointer;padding-bottom:14px;
          {'border-bottom:2.5px solid ' + YELLOW if contact_active else ''}">Contact</a>
     </div>""",
