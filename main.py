@@ -70,6 +70,23 @@ div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button:hover {
     border: none !important;
     box-shadow: none !important;
 }
+
+/* Ensure text-only top nav: no circles/borders */
+button[kind="tertiary"] {
+    border: none !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 0 14px !important;
+}
+
+button[kind="tertiary"]:hover {
+    border: none !important;
+    box-shadow: none !important;
+    background: transparent !important;
+}
 </style>
 """,
     unsafe_allow_html=True,
@@ -94,7 +111,7 @@ with nav_links:
     for col, label in zip([n1, n2, n3, n4], ["Home", "About", "Analytics", "Contact"]):
         page_key = label.lower()
         with col:
-            if st.button(label, key=f"nav_{page_key}"):
+            if st.button(label, key=f"nav_{page_key}", type="tertiary"):
                 st.session_state.active_page = page_key
                 current_page = page_key
             is_active = current_page == page_key
