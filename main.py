@@ -14,7 +14,7 @@ if "active_page" not in st.session_state:
 current_page = st.session_state.active_page
 
 YELLOW = "#F5B800"
-MUTED = "#6F739B"
+MUTED = "#7A7A9D"
 
 st.markdown(
     """
@@ -51,7 +51,7 @@ div.stButton > button {
     white-space: nowrap !important;
 }
 
-/* Top-nav buttons: keep old nav look */
+/* Top-nav buttons: keep original tab look */
 div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button {
     border: none !important;
     background: transparent !important;
@@ -60,7 +60,7 @@ div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button {
     min-height: 0 !important;
     height: auto !important;
     line-height: 1.1 !important;
-    padding: 0 !important;
+    padding: 0 0 14px !important;
     font-size: 0.92rem !important;
     justify-content: flex-start !important;
     margin: 0 !important;
@@ -69,24 +69,9 @@ div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button {
 div[data-testid="stButton"]:has(button[data-testid*="nav_"]) button:hover {
     border: none !important;
     box-shadow: none !important;
+    color: #F5B800 !important;
 }
 
-/* Ensure text-only top nav: no circles/borders */
-button[kind="tertiary"] {
-    border: none !important;
-    background: transparent !important;
-    border-radius: 0 !important;
-    box-shadow: none !important;
-    min-height: 0 !important;
-    height: auto !important;
-    padding: 0 0 14px !important;
-}
-
-button[kind="tertiary"]:hover {
-    border: none !important;
-    box-shadow: none !important;
-    background: transparent !important;
-}
 </style>
 """,
     unsafe_allow_html=True,
@@ -106,12 +91,12 @@ with nav_left:
     )
 
 with nav_links:
-    st.markdown("<div style='padding:16px 0 0'>", unsafe_allow_html=True)
-    n1, n2, n3, n4, _ = st.columns([1.0, 1.0, 1.3, 1.0, 5.0], gap="small")
+    st.markdown("<div style='padding:16px 0 0;border-bottom:2px solid #ECEEF2'>", unsafe_allow_html=True)
+    n1, n2, n3, n4, _ = st.columns([1.0, 1.0, 1.2, 1.0, 4.8], gap="small")
     for col, label in zip([n1, n2, n3, n4], ["Home", "About", "Analytics", "Contact"]):
         page_key = label.lower()
         with col:
-            if st.button(label, key=f"nav_{page_key}", type="tertiary"):
+            if st.button(label, key=f"nav_{page_key}"):
                 st.session_state.active_page = page_key
                 current_page = page_key
             is_active = current_page == page_key
@@ -121,14 +106,14 @@ with nav_links:
                 div[data-testid="stButton"]:has(button[data-testid*="nav_{page_key}"]) button {{
                     color: {YELLOW if is_active else MUTED} !important;
                     font-weight: {700 if is_active else 500} !important;
-                    border-bottom: none !important;
-                    padding-bottom: 0 !important;
+                    {'border-bottom:2.5px solid ' + YELLOW + ' !important;' if is_active else 'border-bottom:none !important;'}
+                    padding-bottom: {'12px' if is_active else '14px'} !important;
                 }}
                 </style>
                 """,
                 unsafe_allow_html=True,
             )
-    st.markdown("<div style='border-bottom:2px solid #DDE1E9;margin-top:14px'></div></div>", unsafe_allow_html=True)
+    st.markdown("</div>", unsafe_allow_html=True)
 
 with nav_right:
     st.markdown(
