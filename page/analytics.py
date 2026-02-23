@@ -820,21 +820,21 @@ def render_analytics() -> None:
         "Demand vs Price": {
             "Spar": {
                 "Abuja": "Pricing closely follows demand volume.",
-                "Island": "Some premium pricing zones exist.",
+                "Island": "Demand is not necessarily driven by lower price, Items of average expense domainate.",
                 "Mainland": "Strong price sensitivity.",
                 "PHC": "Budget pricing preference."
             },
 
             "MFC": {
                 "Abuja": "Premium pricing segments visible.",
-                "Island": "Higher price elasticity observed.",
+                "Island": "Lower priced item dominates the most.",
                 "Mainland": "Balanced price strategy.",
                 "PHC": "Competitive pricing required."
             },
 
             "Supersaver": {
                 "Abuja": "Strong premium price positioning.",
-                "Island": "Price elasticity is high.",
+                "Island": "majority of items on lower cost scale",
                 "Mainland": "Mixed pricing strategy.",
                 "PHC": "Value pricing performs better."
             }
