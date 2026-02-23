@@ -7,140 +7,115 @@ MUTED = "#7A7A9D"
 
 
 def render_home() -> None:
-    with st.container():
+    # --- Header ---
+    st.markdown(
+        f"""
+        <div style="padding:24px 0 10px">
+            <h1 style="margin:0;font-size:1.8rem;font-weight:800">
+                Store Performance Deep-Dive
+            </h1>
+            <p style="color:{MUTED};margin:6px 0 0;font-size:0.95rem">
+                Comparative analytics across locations and store formats
+            </p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    # --- Overview Card ---
+    with st.container(border=True):
         st.markdown(
             f"""
-            <h1 style="margin:0;font-size:1.6rem;font-weight:700">Performance Deep-Dive</h1>
-            <p style="color:{MUTED};margin:4px 0 0;font-size:0.87rem">Real-time metrics for Q3 2024</p>
+            <h3 style="margin-bottom:8px;color:{TEAL}">What This Dashboard Does</h3>
+            <p style="font-size:0.95rem;color:{MUTED};line-height:1.6">
+            This analytics tool provides a structured comparison between two retail stores 
+            across multiple locations. It evaluates performance using product-level demand, 
+            pricing behavior, category revenue contribution, and strategic positioning.
+            </p>
             """,
             unsafe_allow_html=True,
         )
 
     st.markdown("<br>", unsafe_allow_html=True)
 
-    col1, col2, col3 = st.columns([2.2, 1.8, 2])
+    # --- Analysis Breakdown ---
+    col1, col2 = st.columns(2)
 
     with col1:
         with st.container(border=True):
-            hdr_l, hdr_r = st.columns([5, 1])
-            with hdr_l:
-                st.markdown("**Product Performance**")
-            with hdr_r:
-                st.markdown("<span style='color:#ccc;letter-spacing:3px'>···</span>", unsafe_allow_html=True)
-
-            products = [
-                {"name": "Electronics", "value": "$42,800", "pct": 85, "color": TEAL},
-                {"name": "Home & Kitchen", "value": "$31,200", "pct": 63, "color": YELLOW},
-                {"name": "Apparel", "value": "$28,900", "pct": 58, "color": TEAL},
-                {"name": "Beauty & Care", "value": "$19,400", "pct": 39, "color": YELLOW},
-                {"name": "Automotive", "value": "$12,100", "pct": 24, "color": LTEAL},
-            ]
-
-            for product in products:
-                label_col, val_col = st.columns([3, 1])
-                with label_col:
-                    st.markdown(
-                        f"<span style='font-size:0.88rem;font-weight:500'>{product['name']}</span>",
-                        unsafe_allow_html=True,
-                    )
-                with val_col:
-                    st.markdown(
-                        f"<span style='color:{product['color']};font-weight:600;font-size:0.88rem'>{product['value']}</span>",
-                        unsafe_allow_html=True,
-                    )
-
-                st.markdown(
-                    f"""
-                    <div style="height:7px;background:#EEF0F4;border-radius:999px;margin:-8px 0 12px">
-                      <div style="width:{product['pct']}%;height:100%;background:{product['color']};border-radius:999px"></div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
-
-    with col2:
-        with st.container(border=True):
-            st.markdown("**Customer Acquisition**")
-
             st.markdown(
                 f"""
-                <div style="display:flex;justify-content:center;align-items:center;padding:20px 0 10px">
-                  <div style="
-                      width:160px;height:160px;border-radius:50%;
-                      background:conic-gradient({TEAL} 0% 45%, {YELLOW} 45% 75%, {LTEAL} 75% 100%);
-                      display:flex;align-items:center;justify-content:center;">
-                    <div style="width:106px;height:106px;border-radius:50%;background:#fff;
-                                display:flex;flex-direction:column;align-items:center;justify-content:center">
-                      <span style="font-weight:700;font-size:1.3rem">12.4k</span>
-                      <span style="font-size:0.65rem;color:{MUTED};letter-spacing:1.5px;margin-top:2px">TOTAL</span>
-                    </div>
-                  </div>
-                </div>
+                <h4 style="color:{YELLOW};margin-bottom:6px"> Demand & Pricing</h4>
+                <ul style="color:{MUTED};font-size:0.9rem;line-height:1.7">
+                    <li>Top products by order volume</li>
+                    <li>Demand vs average price comparison</li>
+                    <li>Identification of premium vs high-volume SKUs</li>
+                </ul>
                 """,
                 unsafe_allow_html=True,
             )
 
-            legend_items = [
-                ("Organic Search", "45%", TEAL),
-                ("Referral", "30%", YELLOW),
-                ("Paid Advertising", "25%", LTEAL),
-            ]
-            for label, pct, color in legend_items:
-                dot_col, lbl_col, pct_col = st.columns([0.3, 3, 1])
-                with dot_col:
-                    st.markdown(
-                        f"<div style='width:10px;height:10px;border-radius:50%;background:{color};margin-top:6px'></div>",
-                        unsafe_allow_html=True,
-                    )
-                with lbl_col:
-                    st.markdown(f"<span style='font-size:0.85rem'>{label}</span>", unsafe_allow_html=True)
-                with pct_col:
-                    st.markdown(f"<span style='font-weight:600;font-size:0.85rem'>{pct}</span>", unsafe_allow_html=True)
-                st.divider()
+        st.markdown("<br>", unsafe_allow_html=True)
 
-    with col3:
-        hdr_l, hdr_r = st.columns([3, 1])
-        with hdr_l:
-            st.markdown("**Location Analysis**")
-        with hdr_r:
+        with st.container(border=True):
             st.markdown(
-                f"<span style='color:{YELLOW};font-size:0.82rem;font-weight:600;cursor:pointer'>See All ›</span>",
+                f"""
+                <h4 style="color:{TEAL};margin-bottom:6px"> Category Mix</h4>
+                <ul style="color:{MUTED};font-size:0.9rem;line-height:1.7">
+                    <li>Revenue share by Level 1 category</li>
+                    <li>Revenue share by Level 2 category</li>
+                    <li>Order contribution vs revenue contribution</li>
+                </ul>
+                """,
                 unsafe_allow_html=True,
             )
 
-        locations = [
-            {"name": "NORTH", "pct": 78, "icon": "🧭", "bg": "#E6F7F2", "bar": TEAL},
-            {"name": "SOUTH", "pct": 62, "icon": "↓", "bg": "#FFF8E1", "bar": YELLOW},
-            {"name": "EAST", "pct": 45, "icon": "→", "bg": "#E6F7F2", "bar": TEAL},
-            {"name": "WEST", "pct": 91, "icon": "←", "bg": "#FFF8E1", "bar": YELLOW},
-        ]
+    with col2:
+        with st.container(border=True):
+            st.markdown(
+                f"""
+                <h4 style="color:{YELLOW};margin-bottom:6px"> Strategic Positioning</h4>
+                <ul style="color:{MUTED};font-size:0.9rem;line-height:1.7">
+                    <li>Category volume vs price mapping</li>
+                    <li>Revenue-weighted positioning</li>
+                    <li>High-volume / low-price opportunities</li>
+                </ul>
+                """,
+                unsafe_allow_html=True,
+            )
 
-        for location in locations:
-            with st.container(border=True):
-                icon_col, name_col, pct_col = st.columns([0.7, 3, 1])
-                with icon_col:
-                    st.markdown(
-                        f"<div style='background:{location['bg']};border-radius:10px;width:38px;height:38px;"
-                        f"display:flex;align-items:center;justify-content:center;font-size:1.1rem'>"
-                        f"{location['icon']}</div>",
-                        unsafe_allow_html=True,
-                    )
-                with name_col:
-                    st.markdown(
-                        f"<span style='font-weight:700;font-size:0.9rem;letter-spacing:0.5px'>{location['name']}</span>",
-                        unsafe_allow_html=True,
-                    )
-                with pct_col:
-                    st.markdown(
-                        f"<span style='font-weight:700;font-size:0.9rem'>{location['pct']}%</span>",
-                        unsafe_allow_html=True,
-                    )
+        st.markdown("<br>", unsafe_allow_html=True)
 
-                st.markdown(
-                    f"""
-                    <div style="height:6px;background:#EEF0F4;border-radius:999px;margin:4px 0 0">
-                      <div style="width:{location['pct']}%;height:100%;background:{location['bar']};border-radius:999px"></div>
-                    </div>
-                    """,
-                    unsafe_allow_html=True,
-                )
+        with st.container(border=True):
+            st.markdown(
+                f"""
+                <h4 style="color:{TEAL};margin-bottom:6px"> Store Comparison</h4>
+                <ul style="color:{MUTED};font-size:0.9rem;line-height:1.7">
+                    <li>Store 1 vs Store 2 performance</li>
+                    <li>Mainland vs Island breakdown</li>
+                    <li>Cross-location behavioral differences</li>
+                </ul>
+                """,
+                unsafe_allow_html=True,
+            )
+
+    st.markdown("<br><br>", unsafe_allow_html=True)
+
+    # --- Call to Action ---
+    st.markdown(
+        f"""
+        <div style="
+            background:linear-gradient(90deg,{TEAL},{YELLOW});
+            padding:18px;
+            border-radius:14px;
+            text-align:center;
+            color:white;
+            font-weight:600;
+            font-size:0.95rem;">
+            Navigate to the <b>Analytics</b> page to explore detailed store performance insights.
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )

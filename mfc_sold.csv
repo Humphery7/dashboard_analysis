@@ -1,0 +1,41 @@
+location,product_name,level_one,level_two,level_three,avg_price,order_count,rank_in_location
+LOSF1,Cway Bottled Water 75cl,Beverages,Water,Still,172.22203448789935,20127,1
+LOSF1,Old English Family Loaf Sliced Bread,Bread / Bakery,Bread,Packaged,2704.8866910676747,12848,2
+LOSF1,Pepper (Rodo) 200g,Produce,Vegetables,Regular,1961.284492875105,5970,3
+LOSF1,Nestle Pure Life 60cl Protect,Beverages,Water,Still,240.51366683857648,5819,4
+LOSF1,Eggcellent Eggs (x6),Dairy / Chilled / Eggs,Dairy / Eggs,Eggs,1700.3494060097828,5724,5
+LOSF1,Tomato 500g,Produce,Vegetables,Regular,2028.6433607520544,5115,6
+LOSF1,Eva Water 1.5L,Beverages,Water,Still,380.3861755146267,4616,7
+LOSF1,Eva Water 75cl,Beverages,Water,Still,274.6958505322616,4606,8
+LOSF1,Carrot 350g,Produce,Vegetables,Regular,787.1583082271147,4323,9
+LOSF1,Familia Classic Toilet Paper (x2),Home / Pet,Disposables,Paper Products,714.9572291957232,4303,10
+LOSF1,Aquafina Water 75cl,Beverages,Water,Still,239.73510427010913,4031,11
+LOSF1,Red Onion 500g,Produce,Vegetables,Regular,1140.059471141622,3934,12
+LOSF1,Sweet Potato White 1kg,Produce,Vegetables,Regular,1235.0678358702853,3034,13
+LOSF1,Aquafina Water 50cl,Beverages,Water,Still,199.2391304347826,2899,14
+LOSF1,Eggcellent Eggs (x15),Dairy / Chilled / Eggs,Dairy / Eggs,Eggs,4165.0575566282905,2694,15
+LOSF1,Red Onions 1kg,Produce,Vegetables,Regular,2399.19610778443,2680,16
+LOSF1,5Alive Berry Blast 78cl PET,Beverages,Juice / Ice Tea / Sports / Energy,Juice,1465.2657766077473,2661,17
+LOSF1,Farmatago Bellpepper Mix Pack,Produce,Vegetables,Regular,2804.0649792217637,2650,18
+LOSF1,Red Habanero 100g,Produce,Vegetables,Regular,1504.9018860510803,2546,19
+LOSF1,Cucumbers 3 units,Produce,Vegetables,Regular,1138.6064899089824,2529,20
+MNLF1,Old English Family Loaf Sliced Bread,Bread / Bakery,Bread,Packaged,2696.0927515063,5477,1
+MNLF1,Cway Bottled Water 75cl,Beverages,Water,Still,168.6519453207151,1903,2
+MNLF1,Pepper (Rodo) 200g,Produce,Vegetables,Regular,2008.5632022471907,1426,3
+MNLF1,Aquafina Water 75cl,Beverages,Water,Still,236.75617053103966,1337,4
+MNLF1,Carrot 350g,Produce,Vegetables,Regular,790.8519908116389,1307,5
+MNLF1,Tomato 500g,Produce,Vegetables,Regular,2031.1511437908496,1226,6
+MNLF1,5Alive Berry Blast 78cl PET,Beverages,Juice / Ice Tea / Sports / Energy,Juice,1474.032533112582,1209,7
+MNLF1,Mich & Kay Greek Yogurt Sweetened 400ml,Dairy / Chilled / Eggs,Dairy / Eggs,Yoghurt,4681.065753424662,1095,8
+MNLF1,Eva Water 1.5L,Beverages,Water,Still,376.9245179063361,1091,9
+MNLF1,Pepsi  Cola drink 60cl PET,Beverages,Soft Drinks / Mixers,Cola,468.8723670490096,959,10
+MNLF1,Red Onion 500g,Produce,Vegetables,Regular,1158.3210836277965,851,11
+MNLF1,GREENCO Large Brown Eggs (x6),Dairy / Chilled / Eggs,Dairy / Eggs,Eggs,1655.6022167487683,813,12
+MNLF1,Farmatago Bellpepper Mix Pack,Produce,Vegetables,Regular,2794.387351778658,759,13
+MNLF1,Eva Water 75cl,Beverages,Water,Still,281.0289855072464,759,14
+MNLF1,Green Apple Medium  (x1),Produce,Fruit,Apples / Pears,629.579865771812,745,15
+MNLF1,Cucumbers 3 units,Produce,Vegetables,Regular,1146.7172972972983,740,16
+MNLF1,Indomie Onion Chicken 70g,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,330.6648275862067,725,17
+MNLF1,Orange (Green Peel x 6),Produce,Fruit,Other,762.9085553997195,716,18
+MNLF1,Titus Sardine 125g,Packaged Foods,Canned / Jarred / Instant Meals,Canned Meat / Seafood,1778.390279823269,680,19
+MNLF1,Indomie Regular Chicken 70g,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,311.664467766117,667,20

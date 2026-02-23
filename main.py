@@ -3,8 +3,7 @@ import streamlit as st
 from page import render_about, render_analytics, render_contact, render_home
 
 st.set_page_config(
-    page_title="DataPulse – Analytics",
-    page_icon="📊",
+    page_title="Dashboard – Analytics",
     layout="wide",
 )
 
@@ -100,7 +99,7 @@ with nav_left:
     <div style="display:flex;align-items:center;gap:10px;padding:8px 0">
       <div style="background:{YELLOW};border-radius:12px;width:42px;height:42px;
                   display:flex;align-items:center;justify-content:center;font-size:1.3rem">📊</div>
-      <span style="font-weight:700;font-size:1.25rem">DataPulse</span>
+      <span style="font-weight:700;font-size:1.25rem">DashBoard</span>
     </div>""",
         unsafe_allow_html=True,
     )
@@ -135,7 +134,6 @@ with nav_right:
         """
     <div style="display:flex;justify-content:flex-end;gap:16px;
                 align-items:center;padding:16px 0 0;font-size:1.4rem">
-      🔍 🔔
     </div>""",
         unsafe_allow_html=True,
     )
