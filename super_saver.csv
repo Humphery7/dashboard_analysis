@@ -1,0 +1,41 @@
+location,product_name,level_one,level_two,level_three,avg_price,order_count,rank_in_location
+Island,"Super Fresh Premium Loaf, 100% Bromate-Free",Bread / Bakery,Bread,Packaged,1800.000000000,409,1
+Island,INDOMIE ONION NOODLES 70G,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,323.213399504,403,2
+Island,Cway Bottled Water 75Cl,Beverages,Water,Still,164.857747989,373,3
+Island,Aquafina Water 75cl,Beverages,Water,Still,220.203966006,353,4
+Island,SUPERFRESH PREMIUM LOAF,Bread / Bakery,Bread,Packaged,1800.000000000,325,5
+Island,SO YUMMY CARAMEL POPCORN 55G,Snacks,Confectionary,Popcorn,314.326923077,312,6
+Island,"Bigi Premium Drinking Water, 750ml",Beverages,Water,Still,158.003668831,308,7
+Island,TITUS SARDINES 125G,Packaged Foods,Canned / Jarred / Instant Meals,Canned Meat / Seafood,1675.607260726,303,8
+Island,Rose Plus (Pink) 1 Roll,Home / Pet,Disposables,Paper Products,284.964426877,253,9
+Island,"Super Fresh Premium Loaf, 100% Bromate-Free (Sliced)",Bread / Bakery,Bread,Packaged,1800.000000000,235,10
+Island,"AQUADANA Table Water, 33cl",Beverages,Water,Still,149.945844156,231,11
+Island,Aquafina Water 50cl,Beverages,Water,Still,173.158415842,202,12
+Island,SUPERFRESH FAMILY LOAF,Bread / Bakery,Bread,Packaged,1501.621621622,185,13
+Island,Nestlé Pure Life 60cl,Beverages,Water,Still,225.551912568,183,14
+Island,Pepsi Cola drink 60cl PET,Beverages,Soft Drinks / Mixers,Cola,467.708791209,182,15
+Island,SO YUMMY CARAMEL POPCORN 30G,Snacks,Confectionary,Popcorn,173.750000000,180,16
+Island,5 ALIVE BERRY BLAST DRINK 78CL,Beverages,Juice / Ice Tea / Sports / Energy,Juice,1402.372881356,177,17
+Island,S/F MILK BREAD,Ready To Consume,Food,Freshly Baked,1985.057471264,174,18
+Island,Funtime 30G Coconut Chips,Snacks,Salty Snacks,Chips,260.584795322,171,19
+Island,Peak Full Cream Milk Powder 360g Refill,Dairy / Chilled / Eggs,Milk,Milk Powder,4650.225806452,155,20
+Mainland,TITUS SARDINES 125G,Packaged Foods,Canned / Jarred / Instant Meals,Canned Meat / Seafood,1811.867924528,159,1
+Mainland,"Funtime Coconut Chips, 30g",Snacks,Salty Snacks,Chips,262.777777778,54,2
+Mainland,Aquafina Water 50cl,Beverages,Water,Still,182.954545455,44,3
+Mainland,"Coca-Cola Zero Cola Coke Can, 330ml",Beverages,Soft Drinks / Mixers,Cola,538.125000000,40,4
+Mainland,5 ALIVE BERRY BLAST DRINK 78CL,Beverages,Juice / Ice Tea / Sports / Energy,Juice,1459.736842105,38,5
+Mainland,"Super Fresh Premium Loaf, 100% Bromate-Free",Bread / Bakery,Bread,Packaged,1800.000000000,38,6
+Mainland,"Super Fresh Premium Loaf, 100% Bromate-Free (Sliced)",Bread / Bakery,Bread,Packaged,1800.000000000,37,7
+Mainland,Mich & Kay Plain Greek Yoghurt 400Ml,Dairy / Chilled / Eggs,Dairy / Eggs,Yoghurt,4551.718750000,32,8
+Mainland,SO YUMMY CARAMEL POPCORN 55G,Snacks,Confectionary,Popcorn,314.200000000,30,9
+Mainland,Aquafina Water 75cl,Beverages,Water,Still,236.571428571,28,10
+Mainland,EVA TABLE WATER 1.5L,Beverages,Water,Still,373.357142857,28,11
+Mainland,Mich & Kay Unsweetened Greek Yoghurt 400Ml,Dairy / Chilled / Eggs,Dairy / Eggs,Yoghurt,4497.500000000,28,12
+Mainland,INDOMIE ONION NOODLES 70G,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,305.769230769,26,13
+Mainland,Chivita Real Pineapple 1L,Beverages,Juice / Ice Tea / Sports / Energy,Juice,2310.576923077,26,14
+Mainland,Smirnoff Ice 330ml,Bws,Spirits,Vodka,972.291666667,24,15
+Mainland,Indomie Chicken Hungryman 180G,Packaged Foods,Canned / Jarred / Instant Meals,Instant Meals,669.130434783,23,16
+Mainland,Coca-Cola 1L Bottle,Beverages,Soft Drinks / Mixers,Cola,715.434782609,23,17
+Mainland,Smirnoff ice & Guarana Black 330ml Can,Bws,Pre-Mixed,Vodka Mixer,1030.000000000,21,18
+Mainland,Sprite Lemon-Lime Carbonated Drink 0.5L,Beverages,Soft Drinks / Mixers,Lemon / Lime,467.904761905,21,19
+Mainland,Orijin Bitters 20cl,Bws,Spirits,Liqueurs / Creams,1090.000000000,21,20
